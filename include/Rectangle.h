@@ -19,5 +19,5 @@ class Rectangle : public Shape
     double m_Y;
 };
 
-
+typedef Rectangle Square;
 #endif //E4T_RECTANGLE_H

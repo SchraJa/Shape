@@ -48,6 +48,8 @@ Shape* parseArgs(int arg, char **args)
     return new Rectangle(std::stof(args[2]), std::stof(args[3]));
   else if (strcmp(args[1], "t") == 0 && arg == 5)
     return new Triangle(std::stof(args[2]), std::stof(args[3]), std::stof(args[4]));
+  else if (strcmp(args[1], "s") == 0)
+    return new Square(std::stof(args[2]), std::stof(args[3]));
   else if (strcmp(args[1], "h") == 0)
     throw std::invalid_argument("");
   else
@@ -59,7 +61,8 @@ void printHelp()
   std::cout << "How to use this program:\n"
             << "\tCircle:     shape [k] [radius]\n"
             << "\tTriangle:   shape [t] [length a] [length b] [length c]\n"
-            << "\tRectangle:  shape [o] [length a] [length b]\n\n";
+            << "\tRectangle:  shape [o] [length a] [length b]\n\n"
+            << "\tSquare:     shape [s] [length a] [length b]\n\n";
 }
 
 
